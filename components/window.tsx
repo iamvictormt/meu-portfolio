@@ -114,14 +114,14 @@ export default function Window({ title, children, isActive, onClose, onFocus, in
   return (
     <div
       ref={windowRef}
-      className={`absolute bg-white border-4 border-gray-800 rounded-2xl shadow-2xl ${isActive ? "z-50" : "z-40"}`}
+      className={`absolute bg-white border-4 border-gray-800 rounded-2xl shadow-2xl ${isActive ? "z-[60]" : "z-40"}`}
       style={{
         left: position.x,
         top: position.y,
         cursor: isDragging ? "grabbing" : "default",
         // Responsivo: diferentes tamanhos por breakpoint
         width: "clamp(300px, 90vw, 800px)",
-        height: "clamp(400px, 80vh, 600px)",
+        height: "clamp(400px, 80vh, 700px)",
       }}
       onClick={handleFocus}
     >
@@ -142,7 +142,7 @@ export default function Window({ title, children, isActive, onClose, onFocus, in
       </div>
 
       {/* Window Content */}
-      <div className="p-3 sm:p-6 lg:p-8 bg-gray-50 overflow-hidden" style={{ height: "calc(100% - 60px)" }}>
+      <div className="p-3 sm:p-6 lg:p-8 bg-gray-50 rounded-xl" style={{ height: "calc(100% - 60px)" }}>
         {children}
       </div>
     </div>

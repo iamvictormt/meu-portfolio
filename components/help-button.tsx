@@ -22,7 +22,7 @@ export default function HelpButton({ onOpenTutorial }: HelpButtonProps) {
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+        className="w-12 h-12 bg-gray-200 hover:bg-gray-300 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
         title="Tutorial - Como usar o portfólio"
       >
         <span className="text-xl">❓</span>

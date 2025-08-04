@@ -23,7 +23,7 @@ export default function TutorialModal({ isOpen, onClose }: TutorialModalProps) {
     {
       title: "📁 Explore as Pastas",
       content:
-        "Clique nas pastas do lado esquerdo para abrir diferentes seções do meu portfólio. Cada pasta contém informações específicas sobre mim e meu trabalho.",
+        "Clique nas pastas do lado esquerdo para abrir diferentes seções do meu portfólio. Cada pasta contém informações específicas sobre mim e meu trabalho. Em tablets, as pastas ficam organizadas em 2 colunas para melhor aproveitamento do espaço.",
       highlight: "desktop-icons",
       position: "right",
     },
@@ -94,7 +94,7 @@ export default function TutorialModal({ isOpen, onClose }: TutorialModalProps) {
 
       {/* Highlight areas */}
       {currentStepData.highlight === "desktop-icons" && (
-        <div className="fixed top-0 left-0 w-32 h-full bg-white bg-opacity-10 border-2 border-blue-400 rounded-lg z-[101] pointer-events-none animate-pulse" />
+        <div className="fixed top-0 left-0 w-32 md:w-64 lg:w-32 h-full bg-white bg-opacity-10 border-2 border-blue-400 rounded-lg z-[101] pointer-events-none animate-pulse" />
       )}
 
       {currentStepData.highlight === "taskbar" && (

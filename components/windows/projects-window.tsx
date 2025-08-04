@@ -1,87 +1,89 @@
-"use client"
+'use client';
 
 export default function ProjectsWindow() {
   const projects = [
     {
-      name: "E-commerce Platform",
-      description: "Full-stack e-commerce with React, Node.js, and PostgreSQL",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      status: "Completed",
-      color: "bg-green-500",
-      logo: "/placeholder.svg?height=60&width=60",
-      liveUrl: "https://ecommerce-demo.vercel.app",
-      githubUrl: "https://github.com/victor-torres/ecommerce-platform",
+      name: 'UP Connection',
+      description:
+        'Plataforma de conexão profissional voltada para networking e profissionais de decoração, geração de oportunidades e parcerias.',
+      tech: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-up.png?height=60&width=60',
+      liveUrl: 'https://www.upconnection.app/',
     },
     {
-      name: "Task Management App",
-      description: "Real-time collaboration tool with WebSocket integration",
-      tech: ["Next.js", "Socket.io", "MongoDB", "Tailwind"],
-      status: "In Progress",
-      color: "bg-blue-500",
-      logo: "/placeholder.svg?height=60&width=60",
-      liveUrl: "https://taskmanager-demo.vercel.app",
-      githubUrl: "https://github.com/victor-torres/task-manager",
+      name: 'Cliqui',
+      description:
+        'Criação de landing pages acessíveis e com foco em conversão. Construtor de páginas para negócios digitais.',
+      tech: ['Next.js', 'React', 'Tailwind', 'Vercel'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-cliqui.png?height=60&width=60',
+      liveUrl: 'https://www.usecliqui.com.br/',
     },
     {
-      name: "AI Chat Assistant",
-      description: "Intelligent chatbot using OpenAI API and vector database",
-      tech: ["Python", "FastAPI", "OpenAI", "Pinecone"],
-      status: "Completed",
-      color: "bg-purple-500",
-      logo: "/placeholder.svg?height=60&width=60",
-      liveUrl: "https://ai-chat-demo.vercel.app",
-      githubUrl: "https://github.com/victor-torres/ai-chat-assistant",
+      name: 'Monteiro Branding',
+      description: 'Estúdio especializado em identidade visual e branding para empresas e profissionais.',
+      tech: ['React', 'Next.js', 'Framer Motion', 'CSS'],
+      status: 'Pausado',
+      color: 'bg-orange-500',
+      logo: '/logo-monteiro-branding.png?height=60&width=60',
+      liveUrl: 'https://monteiro-branding.vercel.app/',
     },
     {
-      name: "Mobile Banking App",
-      description: "Secure mobile banking solution with biometric auth",
-      tech: ["React Native", "Firebase", "Plaid API"],
-      status: "Planning",
-      color: "bg-yellow-500",
-      logo: "/placeholder.svg?height=60&width=60",
-      liveUrl: null,
-      githubUrl: "https://github.com/victor-torres/mobile-banking",
+      name: 'VitaFresh',
+      description:
+        'Projeto de alimentação saudável, com foco em refeições criadas por nutricionistas e ingredientes naturais.',
+      tech: ['React', 'Next.js', 'Tailwind', 'Stripe'],
+      status: 'Pausado',
+      color: 'bg-orange-500',
+      logo: '/logo-vitafresh.png?height=60&width=60',
+      liveUrl: 'https://vita-fresh.vercel.app/',
     },
     {
-      name: "Weather Dashboard",
-      description: "Real-time weather monitoring with interactive maps",
-      tech: ["Vue.js", "D3.js", "Weather API", "Mapbox"],
-      status: "Completed",
-      color: "bg-cyan-500",
-      logo: "/placeholder.svg?height=60&width=60",
-      liveUrl: "https://weather-dashboard-demo.vercel.app",
-      githubUrl: "https://github.com/victor-torres/weather-dashboard",
+      name: 'Woof',
+      description:
+        'Plataforma voltada para o público pet, oferecendo serviços e produtos relacionados a animais domésticos.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
+      status: 'Pausado',
+      color: 'bg-orange-500',
+      logo: '/logo-woof.png?height=60&width=60',
+      liveUrl: 'https://usewoof.vercel.app/',
     },
     {
-      name: "Social Media Analytics",
-      description: "Analytics platform for social media performance tracking",
-      tech: ["React", "Chart.js", "Node.js", "Redis"],
-      status: "Completed",
-      color: "bg-pink-500",
-      logo: "/placeholder.svg?height=60&width=60",
-      liveUrl: "https://social-analytics-demo.vercel.app",
-      githubUrl: "https://github.com/victor-torres/social-analytics",
+      name: 'Jordanha Targino',
+      description:
+        'Página profissional para especialista em LOAS e aposentadoria. Voltado ao nicho jurídico/previdenciário.',
+      tech: ['Next.js', 'React', 'Tailwind', 'SEO'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-jordanha.png?height=60&width=60',
+      liveUrl: 'https://jordanha-targino.vercel.app/',
     },
-  ]
+    {
+      name: 'Batata Cheff',
+      description:
+        'Projeto culinário focado em receitas de batatas recheadas. Landing page de curso digital gastronômico.',
+      tech: ['React', 'Next.js', 'Tailwind', 'Analytics'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-batata-chef.png?height=60&width=60',
+      liveUrl: 'https://batatas-recheadas.vercel.app/',
+    },
+  ];
 
   const handleLiveDemo = (url: string | null) => {
     if (url) {
-      window.open(url, "_blank")
+      window.open(url, '_blank');
     }
-  }
-
-  const handleGithub = (url: string) => {
-    window.open(url, "_blank")
-  }
+  };
 
   return (
     <div className="space-y-4 sm:space-y-6 h-full overflow-y-auto">
-      {/* Orange header bar */}
-      <div className="bg-orange-400 h-6 sm:h-8 w-full -mx-3 sm:-mx-6 lg:-mx-8 -mt-3 sm:-mt-6 lg:-mt-8"></div>
-
       <div className="text-center mb-6">
-        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-800 tracking-wider mb-2">PROJECTS</h2>
-        <p className="text-sm sm:text-base text-gray-600">Alguns dos meus projetos recentes</p>
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-800 tracking-wider mb-2">PROJETOS</h2>
+        <p className="text-sm sm:text-base text-gray-600">Alguns dos meus projetos desenvolvidos</p>
       </div>
 
       <div className="space-y-4 pb-4">
@@ -90,16 +92,15 @@ export default function ProjectsWindow() {
             key={index}
             className="bg-white border-2 border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
           >
+            {/* Project Logo */}
+            <div className="flex justify-center mb-4">
+              <img
+                src={project.logo || '/placeholder.svg'}
+                alt={`${project.name} logo`}
+                className="w-60 h-60 object-contain"
+              />
+            </div>
             <div className="flex items-start space-x-4">
-              {/* Project Logo */}
-              <div className="flex-shrink-0">
-                <img
-                  src={project.logo || "/placeholder.svg"}
-                  alt={`${project.name} logo`}
-                  className="w-16 h-16 rounded-lg border-2 border-gray-200 object-cover bg-gray-50"
-                />
-              </div>
-
               {/* Project Info */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between mb-3">
@@ -126,32 +127,13 @@ export default function ProjectsWindow() {
 
                 {/* Action Buttons */}
                 <div className="flex items-center space-x-3">
-                  {project.liveUrl ? (
-                    <button
-                      onClick={() => handleLiveDemo(project.liveUrl)}
-                      className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
-                    >
-                      <span>🚀</span>
-                      <span>Live Demo</span>
-                    </button>
-                  ) : (
-                    <span className="flex items-center space-x-1 px-3 py-1.5 bg-gray-300 text-gray-500 rounded text-sm font-medium cursor-not-allowed">
-                      <span>⏳</span>
-                      <span>Em Desenvolvimento</span>
-                    </span>
-                  )}
-
                   <button
-                    onClick={() => handleGithub(project.githubUrl)}
-                    className="flex items-center space-x-1 px-3 py-1.5 bg-gray-800 text-white rounded text-sm font-medium hover:bg-gray-900 transition-colors"
+                    onClick={() => handleLiveDemo(project.liveUrl)}
+                    className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
-                    <span>📁</span>
-                    <span>GitHub</span>
+                    <span>🚀</span>
+                    <span>Ver Projeto</span>
                   </button>
-
-                  <div className="flex items-center text-xs text-gray-500 ml-auto">
-                    <span>⭐ {Math.floor(Math.random() * 50) + 10} stars</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -161,15 +143,9 @@ export default function ProjectsWindow() {
 
       <div className="text-center pt-4 border-t border-gray-200">
         <p className="text-sm text-gray-500">
-          💡 Mais projetos disponíveis no meu{" "}
-          <button
-            onClick={() => window.open("https://github.com/victor-torres", "_blank")}
-            className="text-blue-600 font-medium hover:underline cursor-pointer"
-          >
-            GitHub
-          </button>
+          💼 Todos os projetos foram desenvolvidos com foco na experiência do usuário e performance
         </p>
       </div>
     </div>
-  )
+  );
 }

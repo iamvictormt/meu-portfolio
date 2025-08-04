@@ -1,44 +1,41 @@
 export default function SkillsWindow() {
   const skillCategories = [
     {
-      category: "Frontend",
+      category: 'Frontend',
       skills: [
-        { name: "React", level: 95, color: "bg-blue-500" },
-        { name: "Next.js", level: 90, color: "bg-gray-800" },
-        { name: "TypeScript", level: 88, color: "bg-blue-600" },
-        { name: "Tailwind CSS", level: 92, color: "bg-teal-500" },
-        { name: "Vue.js", level: 75, color: "bg-green-500" },
+        { name: 'React', level: 92, color: 'bg-blue-500' },
+        { name: 'Next.js', level: 90, color: 'bg-gray-800' },
+        { name: 'TypeScript', level: 90, color: 'bg-yellow-400' },
+        { name: 'Tailwind CSS', level: 88, color: 'bg-teal-500' },
+        { name: 'Angular 2+', level: 95, color: 'bg-green-500' },
       ],
     },
     {
-      category: "Backend",
+      category: 'Backend',
       skills: [
-        { name: "Node.js", level: 90, color: "bg-green-600" },
-        { name: "Python", level: 85, color: "bg-yellow-500" },
-        { name: "PostgreSQL", level: 88, color: "bg-blue-700" },
-        { name: "MongoDB", level: 82, color: "bg-green-700" },
-        { name: "GraphQL", level: 78, color: "bg-pink-500" },
+        { name: 'Node.js', level: 88, color: 'bg-green-600' },
+        { name: 'PostgreSQL', level: 85, color: 'bg-yellow-600' },
+        { name: 'NestJS', level: 88, color: 'bg-blue-700' },
+        { name: 'Spring Boot', level: 92, color: 'bg-green-700' },
+        { name: 'Prisma ORM', level: 82, color: 'bg-purple-600' },
       ],
     },
     {
-      category: "DevOps & Tools",
+      category: 'DevOps & Tools',
       skills: [
-        { name: "Docker", level: 85, color: "bg-blue-400" },
-        { name: "AWS", level: 80, color: "bg-orange-500" },
-        { name: "Git", level: 95, color: "bg-red-500" },
-        { name: "Kubernetes", level: 70, color: "bg-blue-600" },
-        { name: "CI/CD", level: 82, color: "bg-purple-500" },
+        { name: 'Docker', level: 82, color: 'bg-blue-400' },
+        { name: 'AWS', level: 80, color: 'bg-orange-500' },
+        { name: 'Git', level: 94, color: 'bg-purple-400' },
+        { name: 'Vercel', level: 90, color: 'bg-black' },
+        { name: 'Postman', level: 95, color: 'bg-orange-400' },
       ],
     },
-  ]
+  ];
 
   return (
     <div className="space-y-4 sm:space-y-6 h-full overflow-y-auto">
-      {/* Orange header bar */}
-      <div className="bg-orange-400 h-6 sm:h-8 w-full -mx-3 sm:-mx-6 lg:-mx-8 -mt-3 sm:-mt-6 lg:-mt-8"></div>
-
       <div className="text-center mb-6">
-        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-800 tracking-wider mb-2">SKILLS</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-800 tracking-wider mb-2">HABILIDADES</h2>
         <p className="text-sm sm:text-base text-gray-600">Minhas principais competências técnicas</p>
       </div>
 
@@ -47,9 +44,9 @@ export default function SkillsWindow() {
           <div key={categoryIndex} className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
             <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
               <span className="mr-2">
-                {category.category === "Frontend" && "🎨"}
-                {category.category === "Backend" && "⚙️"}
-                {category.category === "DevOps & Tools" && "🚀"}
+                {category.category === 'Frontend' && '🎨'}
+                {category.category === 'Backend' && '⚙️'}
+                {category.category === 'DevOps & Tools' && '🚀'}
               </span>
               {category.category}
             </h3>
@@ -72,5 +69,5 @@ export default function SkillsWindow() {
         ))}
       </div>
     </div>
-  )
+  );
 }

@@ -1,14 +1,12 @@
 "use client"
 
 import Window from "./window"
-import WorksWindow from "./windows/works-window"
 import ProjectsWindow from "./windows/projects-window"
 import ContactWindow from "./windows/contact-window"
 import ResumeWindow from "./windows/resume-window"
 import AboutWindow from "./windows/about-window"
 import SkillsWindow from "./windows/skills-window"
 import BlogWindow from "./windows/blog-window"
-import CertificatesWindow from "./windows/certificates-window"
 
 interface WindowManagerProps {
   openWindows: string[]
@@ -20,8 +18,6 @@ interface WindowManagerProps {
 export default function WindowManager({ openWindows, activeWindow, onCloseWindow, onFocusWindow }: WindowManagerProps) {
   const getWindowContent = (windowId: string) => {
     switch (windowId) {
-      case "works":
-        return <WorksWindow />
       case "projects":
         return <ProjectsWindow />
       case "contact":
@@ -34,8 +30,6 @@ export default function WindowManager({ openWindows, activeWindow, onCloseWindow
         return <SkillsWindow />
       case "blog":
         return <BlogWindow />
-      case "certificates":
-        return <CertificatesWindow />
       default:
         return <div>Window not found</div>
     }
