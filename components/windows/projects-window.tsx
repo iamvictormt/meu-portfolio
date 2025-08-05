@@ -6,7 +6,7 @@ export default function ProjectsWindow() {
       name: 'UP Connection',
       description:
         'Plataforma de conexão profissional voltada para networking e profissionais de decoração, geração de oportunidades e parcerias.',
-      tech: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
+      tech: ['Next.js', 'NestJS', 'GraphQL', 'Tailwind', 'Stripe'],
       status: 'Completo',
       color: 'bg-green-500',
       logo: '/logo-up.png?height=60&width=60',
@@ -25,7 +25,7 @@ export default function ProjectsWindow() {
     {
       name: 'Monteiro Branding',
       description: 'Estúdio especializado em identidade visual e branding para empresas e profissionais.',
-      tech: ['React', 'Next.js', 'Framer Motion', 'CSS'],
+      tech: ['React', 'Next.js', 'Framer Motion', 'Tailwind'],
       status: 'Pausado',
       color: 'bg-orange-500',
       logo: '/logo-monteiro-branding.png?height=60&width=60',
@@ -35,7 +35,7 @@ export default function ProjectsWindow() {
       name: 'VitaFresh',
       description:
         'Projeto de alimentação saudável, com foco em refeições criadas por nutricionistas e ingredientes naturais.',
-      tech: ['React', 'Next.js', 'Tailwind', 'Stripe'],
+      tech: ['React', 'Next.js', 'Tailwind', 'CSS'],
       status: 'Pausado',
       color: 'bg-orange-500',
       logo: '/logo-vitafresh.png?height=60&width=60',
@@ -45,7 +45,7 @@ export default function ProjectsWindow() {
       name: 'Woof',
       description:
         'Plataforma voltada para o público pet, oferecendo serviços e produtos relacionados a animais domésticos.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
+      tech: ['React', 'NextJS', 'Framer Motion', 'Tailwind'],
       status: 'Pausado',
       color: 'bg-orange-500',
       logo: '/logo-woof.png?height=60&width=60',
@@ -70,6 +70,16 @@ export default function ProjectsWindow() {
       color: 'bg-green-500',
       logo: '/logo-batata-chef.png?height=60&width=60',
       liveUrl: 'https://batatas-recheadas.vercel.app/',
+    },
+      {
+      name: 'Ana Silva Fotografia',
+      description:
+        'Projeto de um estúdio de fotografia especializada em eventos, ensaios e natureza.',
+      tech: ['React', 'Next.js', 'Tailwind', 'Analytics'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-ana-silva-fotografia.png?height=60&width=60',
+      liveUrl: 'https://ana-silva-fotografia.vercel.app/',
     },
   ];
 
