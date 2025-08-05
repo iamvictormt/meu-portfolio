@@ -37,7 +37,7 @@ export default function TutorialModal({ isOpen, onClose }: TutorialModalProps) {
     {
       title: "📋 Barra de Tarefas",
       content:
-        "Na parte inferior, você encontra as janelas abertas (esquerda) e meus links sociais (centro). Clique nos ícones sociais para me encontrar nas redes!",
+        "Na parte inferior, você encontra meus links sociais. Clique nos ícones sociais para me encontrar nas redes!",
       highlight: "taskbar",
       position: "top",
     },
