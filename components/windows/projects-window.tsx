@@ -71,6 +71,16 @@ export default function ProjectsWindow() {
       logo: '/logo-batata-chef.png?height=60&width=60',
       liveUrl: 'https://batatas-recheadas.vercel.app/',
     },
+          {
+      name: 'Midori coLAB',
+      description:
+        'Projeto de negócios e líderes para um futuro ágil, inovador e regenerativo.',
+      tech: ['React', 'Next.js', 'Tailwind'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-midori.png?height=60&width=60',
+      liveUrl: 'https://www.midoricolab.com/',
+    },
       {
       name: 'Ana Silva Fotografia',
       description:
