@@ -3,6 +3,43 @@
 export default function ProjectsWindow() {
   const projects = [
     {
+      name: 'IMDN',
+      description: 'Plataforma de cursos EAD de Angola voltada para o mercado do marketing digital e negócios online.',
+      tech: ['Next.js', 'NestJS', 'GraphQL', 'Tailwind', 'AppyPay'],
+      status: 'Em Teste',
+      color: 'bg-blue-500',
+      logo: '/logo sem fundo png letras azuis.png?height=60&width=60',
+      liveUrl: 'https://www.institutomdn.com/',
+    },
+    {
+      name: 'OHomemSó',
+      description: 'Página profissional do cantor e compositor brasileiro OHomemSó.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion', 'Notion'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-ohomemso.png?height=60&width=60',
+      liveUrl: 'https://www.ohomemso.com.br/',
+    },
+    {
+      name: 'Midori coLAB',
+      description: 'Projeto de negócios e líderes para um futuro ágil, inovador e regenerativo.',
+      tech: ['React', 'Next.js', 'Tailwind'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-midori.png?height=60&width=60',
+      liveUrl: 'https://www.midoricolab.com/',
+    },
+    {
+      name: 'Jordanha Targino',
+      description:
+        'Página profissional para especialista em LOAS e aposentadoria. Voltado ao nicho jurídico/previdenciário.',
+      tech: ['Next.js', 'React', 'Tailwind', 'SEO'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-jordanha.png?height=60&width=60',
+      liveUrl: 'https://jordanha-targino.vercel.app/',
+    },
+    {
       name: 'UP Connection',
       description:
         'Plataforma de conexão profissional voltada para networking e profissionais de decoração, geração de oportunidades e parcerias.',
@@ -51,16 +88,7 @@ export default function ProjectsWindow() {
       logo: '/logo-woof.png?height=60&width=60',
       liveUrl: 'https://usewoof.vercel.app/',
     },
-    {
-      name: 'Jordanha Targino',
-      description:
-        'Página profissional para especialista em LOAS e aposentadoria. Voltado ao nicho jurídico/previdenciário.',
-      tech: ['Next.js', 'React', 'Tailwind', 'SEO'],
-      status: 'Completo',
-      color: 'bg-green-500',
-      logo: '/logo-jordanha.png?height=60&width=60',
-      liveUrl: 'https://jordanha-targino.vercel.app/',
-    },
+
     {
       name: 'Batata Cheff',
       description:
@@ -71,20 +99,10 @@ export default function ProjectsWindow() {
       logo: '/logo-batata-chef.png?height=60&width=60',
       liveUrl: 'https://batatas-recheadas.vercel.app/',
     },
-          {
-      name: 'Midori coLAB',
-      description:
-        'Projeto de negócios e líderes para um futuro ágil, inovador e regenerativo.',
-      tech: ['React', 'Next.js', 'Tailwind'],
-      status: 'Completo',
-      color: 'bg-green-500',
-      logo: '/logo-midori.png?height=60&width=60',
-      liveUrl: 'https://www.midoricolab.com/',
-    },
-      {
+
+    {
       name: 'Ana Silva Fotografia',
-      description:
-        'Projeto de um estúdio de fotografia especializada em eventos, ensaios e natureza.',
+      description: 'Projeto de um estúdio de fotografia especializada em eventos, ensaios e natureza.',
       tech: ['React', 'Next.js', 'Tailwind', 'Analytics'],
       status: 'Completo',
       color: 'bg-green-500',
@@ -110,7 +128,7 @@ export default function ProjectsWindow() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white border-2 border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white border-2 border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow grid grid-cols-1 md:grid-cols-2"
           >
             {/* Project Logo */}
             <div className="flex justify-center mb-4">
