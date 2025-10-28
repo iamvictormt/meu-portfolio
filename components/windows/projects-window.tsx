@@ -2,6 +2,15 @@
 
 export default function ProjectsWindow() {
   const projects = [
+        {
+      name: 'Farejei',
+      description: 'Plataforma de localização de pets desaparacidos e anúncio de petshops parceiros.',
+      tech: ['Next.js', 'Tailwind', 'Stripe'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/farejei-icon.png?height=60&width=60',
+      liveUrl: 'https://farejei.vercel.app/',
+    },
     {
       name: 'IMDN',
       description: 'Plataforma de cursos EAD de Angola voltada para o mercado do marketing digital e negócios online.',
