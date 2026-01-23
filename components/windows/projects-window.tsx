@@ -3,8 +3,19 @@
 export default function ProjectsWindow() {
   const projects = [
     {
+      name: 'PromptPilot',
+      description:
+        'Landing page de ferramenta de gerenciamento de prompts para IA, otimizando fluxos de trabalho e produtividade.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/prompt-pilot-icon.png?height=60&width=60',
+      liveUrl: 'https://prompt-pilot-ashen.vercel.app/',
+    },
+    {
       name: 'AgroFlow',
-      description: 'Landing page de gestão agropecuária inteligente para centralizar custos, atividades e resultados da sua fazenda.',
+      description:
+        'Landing page de gestão agropecuária inteligente para centralizar custos, atividades e resultados da sua fazenda.',
       tech: ['Next.js', 'Tailwind', 'Framer Motion'],
       status: 'Completo',
       color: 'bg-green-500',
@@ -13,7 +24,8 @@ export default function ProjectsWindow() {
     },
     {
       name: 'FocusPlay',
-      description: 'Landing page de planner para atletas que organiza rotina, fortalece mentalidade e acelera evolução.',
+      description:
+        'Landing page de planner para atletas que organiza rotina, fortalece mentalidade e acelera evolução.',
       tech: ['Next.js', 'Tailwind', 'Framer Motion'],
       status: 'Completo',
       color: 'bg-green-500',
