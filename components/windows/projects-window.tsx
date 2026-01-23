@@ -2,14 +2,32 @@
 
 export default function ProjectsWindow() {
   const projects = [
-        {
+    {
+      name: 'AgroFlow',
+      description: 'Landing page de gestão agropecuária inteligente para centralizar custos, atividades e resultados da sua fazenda.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/agroflow-icon.png?height=60&width=60',
+      liveUrl: 'https://agroflow-blush.vercel.app/',
+    },
+    {
+      name: 'FocusPlay',
+      description: 'Landing page de planner para atletas que organiza rotina, fortalece mentalidade e acelera evolução.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/focusplay-icon.png?height=60&width=60',
+      liveUrl: 'https://focusplay-orcin.vercel.app/',
+    },
+    {
       name: 'Farejei',
       description: 'Plataforma de localização de pets desaparacidos e anúncio de petshops parceiros.',
       tech: ['Next.js', 'Tailwind', 'Stripe'],
       status: 'Completo',
       color: 'bg-green-500',
       logo: '/farejei-icon.png?height=60&width=60',
-      liveUrl: 'https://farejei.vercel.app/',
+      liveUrl: 'https://www.farejeiapp.com.br/',
     },
     {
       name: 'IMDN',
