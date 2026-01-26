@@ -3,16 +3,6 @@
 export default function ProjectsWindow() {
   const projects = [
     {
-      name: 'PromptPilot',
-      description:
-        'Landing page de ferramenta de gerenciamento de prompts para IA, otimizando fluxos de trabalho e produtividade.',
-      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
-      status: 'Completo',
-      color: 'bg-green-500',
-      logo: '/prompt-pilot-icon.png?height=60&width=60',
-      liveUrl: 'https://prompt-pilot-ashen.vercel.app/',
-    },
-    {
       name: 'AgroFlow',
       description:
         'Landing page de gestão agropecuária inteligente para centralizar custos, atividades e resultados da sua fazenda.',
@@ -22,6 +12,28 @@ export default function ProjectsWindow() {
       logo: '/agroflow-icon.png?height=60&width=60',
       liveUrl: 'https://agroflow-blush.vercel.app/',
     },
+    {
+      name: 'Mente Leve',
+      description:
+        'Site institucional para clínica psicóloga, oferecendo informações sobre serviços, abordagem terapêutica e agendamento de consultas.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/mente-leve-icon.png?height=60&width=60',
+      liveUrl: 'https://mente-leve.vercel.app/',
+    },
+
+    {
+      name: 'PromptPilot',
+      description:
+        'Landing page de ferramenta de gerenciamento de prompts para IA, otimizando fluxos de trabalho e produtividade.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/prompt-pilot-icon.png?height=60&width=60',
+      liveUrl: 'https://prompt-pilot-ashen.vercel.app/',
+    },
+
     {
       name: 'FocusPlay',
       description:
