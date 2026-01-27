@@ -20,7 +20,7 @@ export default function ProjectsWindow() {
       status: 'Completo',
       color: 'bg-green-500',
       logo: '/mente-leve-icon.png?height=60&width=60',
-      liveUrl: 'https://mente-leve.vercel.app/',
+      liveUrl: 'https://mente-leve-theta.vercel.app/',
     },
 
     {
