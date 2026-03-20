@@ -3,6 +3,24 @@
 export default function ProjectsWindow() {
   const projects = [
     {
+      name: 'TennisPool',
+      description: 'Sistema de bolão dos maiores torneios de tênis do mundo com disputa de ranking e premiações.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion', 'ResendAPI'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-tennispool.png?height=60&width=60',
+      liveUrl: 'https://tennispool.com.br/',
+    },
+    {
+      name: 'TennisPool',
+      description: 'Sistema de bolão dos maiores torneios de tênis do mundo com disputa de ranking e premiações.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion', 'ResendAPI'],
+      status: 'Completo',
+      color: 'bg-green-500',
+      logo: '/logo-tennispool.png?height=60&width=60',
+      liveUrl: 'https://tennispool.com.br/',
+    },
+    {
       name: 'AgroFlow',
       description:
         'Landing page de gestão agropecuária inteligente para centralizar custos, atividades e resultados da sua fazenda.',
