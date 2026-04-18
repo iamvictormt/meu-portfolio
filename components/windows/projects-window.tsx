@@ -5,20 +5,21 @@ export default function ProjectsWindow() {
     {
       name: 'TennisPool',
       description: 'Sistema de bolão dos maiores torneios de tênis do mundo com disputa de ranking e premiações.',
-      tech: ['Next.js', 'Tailwind', 'Framer Motion', 'ResendAPI'],
+      tech: ['Next.js', 'Tailwind', 'Framer Motion', 'ResendAPI', 'NeonDB'],
       status: 'Completo',
       color: 'bg-green-500',
       logo: '/logo-tennispool.png?height=60&width=60',
       liveUrl: 'https://tennispool.com.br/',
     },
     {
-      name: 'TennisPool',
-      description: 'Sistema de bolão dos maiores torneios de tênis do mundo com disputa de ranking e premiações.',
-      tech: ['Next.js', 'Tailwind', 'Framer Motion', 'ResendAPI'],
+      name: 'FrodoTech',
+      description:
+        'Landing page profissional para empresa de tecnologia e assessoria em TI, com foco em conversão, apresentação clara dos serviços, credibilidade e geração de leads qualificados.',
+      tech: ['Next.js', 'Tailwind', 'Framer Motion'],
       status: 'Completo',
       color: 'bg-green-500',
-      logo: '/logo-tennispool.png?height=60&width=60',
-      liveUrl: 'https://tennispool.com.br/',
+      logo: '/logo-frodo-tech.svg?height=60&width=60',
+      liveUrl: 'https://frodotech.vercel.app/',
     },
     {
       name: 'AgroFlow',
