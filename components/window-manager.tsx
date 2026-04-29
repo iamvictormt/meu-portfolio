@@ -7,6 +7,8 @@ import ResumeWindow from "./windows/resume-window"
 import AboutWindow from "./windows/about-window"
 import SkillsWindow from "./windows/skills-window"
 import BlogWindow from "./windows/blog-window"
+import MinesweeperWindow from "./windows/minesweeper-window"
+import SnakeWindow from "./windows/snake-window"
 
 interface WindowManagerProps {
   openWindows: string[]
@@ -30,6 +32,10 @@ export default function WindowManager({ openWindows, activeWindow, onCloseWindow
         return <SkillsWindow />
       case "blog":
         return <BlogWindow />
+      case "minesweeper":
+        return <MinesweeperWindow />
+      case "snake":
+        return <SnakeWindow />
       default:
         return <div>Window not found</div>
     }
@@ -55,6 +61,10 @@ export default function WindowManager({ openWindows, activeWindow, onCloseWindow
         return "C:\\VICTOR\\blog"
       case "certificates":
         return "C:\\VICTOR\\certificates"
+      case "minesweeper":
+        return "C:\\JOGOS\\campominado.exe"
+      case "snake":
+        return "C:\\JOGOS\\snake.exe"
       default:
         return "Unknown"
     }

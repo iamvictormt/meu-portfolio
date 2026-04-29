@@ -21,6 +21,7 @@ export default function DesktopIcon({ label, icon, color, onClick }: DesktopIcon
     playSkillsSound,
     playBlogSound,
     playCertificatesSound,
+    playFolderSound,
   } = useSound()
 
   const getFolderContent = (folderId: string) => {
@@ -73,6 +74,22 @@ export default function DesktopIcon({ label, icon, color, onClick }: DesktopIcon
           innerBg: "#5cf6dfff",
           decorations: "blog",
         }
+      case "Campo Minado":
+        return {
+          bgColor: "#fbbf24",
+          tabColor: "#f59e0b",
+          innerIcon: "💣",
+          innerBg: "#000000",
+          decorations: "minesweeper",
+        }
+      case "Snake":
+        return {
+          bgColor: "#fbbf24",
+          tabColor: "#f59e0b",
+          innerIcon: "🐍",
+          innerBg: "#16a34a",
+          decorations: "snake",
+        }
       default:
         return {
           bgColor: "#fbbf24",
@@ -105,6 +122,10 @@ export default function DesktopIcon({ label, icon, color, onClick }: DesktopIcon
       case "Blog":
         playBlogSound()
         break
+      case "Campo Minado":
+      case "Snake":
+        playFolderSound()
+        break
       default:
         // Sem som padrão
         break
@@ -118,6 +139,20 @@ export default function DesktopIcon({ label, icon, color, onClick }: DesktopIcon
 
   const renderDecorations = (type: string) => {
     switch (type) {
+      case "minesweeper":
+        return (
+          <>
+            <div className="absolute top-1 right-1 text-[6px] sm:text-[8px] opacity-50">💣</div>
+            <div className="absolute bottom-2 left-1 text-[6px] sm:text-[8px] opacity-50 font-bold text-red-500">99</div>
+          </>
+        )
+      case "snake":
+        return (
+          <>
+            <div className="absolute top-1 right-1 text-[6px] sm:text-[8px] opacity-50">🐍</div>
+            <div className="absolute bottom-2 left-1 text-[6px] sm:text-[8px] opacity-50 font-bold text-green-500">00</div>
+          </>
+        )
       case "works":
         return (
           <>

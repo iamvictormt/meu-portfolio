@@ -1,5 +1,8 @@
 'use client';
 
+import { useState } from 'react';
+import { ExternalLink, CheckCircle, Clock } from 'lucide-react';
+
 export default function ProjectsWindow() {
   const projects = [
     {
@@ -181,79 +184,112 @@ export default function ProjectsWindow() {
     },
   ];
 
+  const [filter, setFilter] = useState('Todos');
+
   const handleLiveDemo = (url: string | null) => {
     if (url) {
       window.open(url, '_blank');
     }
   };
 
+  const filteredProjects = projects.filter(project => {
+    if (filter === 'Todos') return true;
+    if (filter === 'Completos') return project.status === 'Completo';
+    if (filter === 'Pausados') return project.status === 'Pausado';
+    return project.tech.includes(filter);
+  });
+
   return (
-    <div className="space-y-4 sm:space-y-6 h-full overflow-y-auto">
+    <div className="space-y-4 sm:space-y-6 h-full overflow-y-auto font-sans">
       <div className="text-center mb-6">
         <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-800 tracking-wider mb-2">PROJETOS</h2>
         <p className="text-sm sm:text-base text-gray-600">Alguns dos meus projetos desenvolvidos</p>
       </div>
 
-      <div className="space-y-4 pb-4">
-        {projects.map((project, index) => (
+      {/* Filtros */}
+      <div className="flex flex-wrap gap-2 justify-center mb-6">
+        {['Todos', 'Completos', 'Pausados'].map((category) => (
+          <button
+            key={category}
+            onClick={() => setFilter(category)}
+            className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+              filter === category
+                ? 'bg-gray-800 text-white border-gray-800 shadow-sm'
+                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid de Projetos */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
+        {filteredProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-white border-2 border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow grid grid-cols-1 md:grid-cols-2"
+            className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col justify-between hover:border-gray-300 transition-colors"
           >
-            {/* Project Logo */}
-            <div className="flex justify-center mb-4">
-              <img
-                src={project.logo || '/placeholder.svg'}
-                alt={`${project.name} logo`}
-                className="w-60 h-60 object-contain"
-              />
-            </div>
-            <div className="flex items-start space-x-4">
-              {/* Project Info */}
-              <div className="flex-1 min-w-0">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-bold text-gray-800 leading-tight">{project.name}</h3>
-                  <span
-                    className={`px-2 py-1 rounded-full text-xs font-medium text-white ${project.color} ml-2 flex-shrink-0`}
-                  >
-                    {project.status}
-                  </span>
-                </div>
-
-                <p className="text-gray-600 text-sm mb-3 leading-relaxed">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium border"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
+            <div>
+              <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <button
-                    onClick={() => handleLiveDemo(project.liveUrl)}
-                    className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors"
-                  >
-                    <span>🚀</span>
-                    <span>Ver Projeto</span>
-                  </button>
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center p-2 flex-shrink-0">
+                    <img
+                      src={project.logo || '/placeholder.svg'}
+                      alt={`${project.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-gray-800 leading-tight">
+                      {project.name}
+                    </h3>
+                    <span
+                      className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold text-white mt-1 ${
+                        project.status === 'Completo' ? 'bg-green-600' : 'bg-orange-500'
+                      }`}
+                    >
+                      {project.status}
+                    </span>
+                  </div>
                 </div>
               </div>
+
+              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+
+            <div>
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {project.tech.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium border border-gray-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                onClick={() => handleLiveDemo(project.liveUrl)}
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition-colors shadow-sm"
+              >
+                <span>🚀</span>
+                <span>Ver Projeto</span>
+              </button>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="text-center pt-4 border-t border-gray-200">
-        <p className="text-sm text-gray-500">
-          💼 Todos os projetos foram desenvolvidos com foco na experiência do usuário e performance
-        </p>
-      </div>
+      {filteredProjects.length === 0 && (
+        <div className="text-center text-gray-500 py-8 text-sm">
+          Nenhum projeto encontrado nesta categoria.
+        </div>
+      )}
     </div>
   );
 }
+
